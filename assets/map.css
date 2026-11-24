@@ -1,0 +1,120 @@
+/* A regional illustration, not navigation. Pin coordinates follow the supplied map. */
+.hr-map {
+  --map-ink: #112c45;
+  --map-accent: #c44736;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  color: var(--map-ink);
+  container-type: inline-size;
+  container-name: regional-map;
+}
+
+.hr-map__canvas {
+  overflow: hidden;
+  background: #e3ecef;
+  border-radius: 6px;
+}
+
+.hr-map__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hr-map__place {
+  pointer-events: none;
+}
+
+.hr-map__place text {
+  fill: var(--map-ink);
+  font-family: var(--sans, "DM Sans", Arial, sans-serif);
+  font-size: 36px;
+  font-weight: 650;
+  letter-spacing: -.02em;
+  stroke: #f6f9fa;
+  stroke-width: 8px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+
+.hr-map__leader {
+  fill: none;
+  stroke: #617784;
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+}
+
+.hr-map__pin {
+  fill: var(--map-ink);
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.hr-map__place.is-current .hr-map__pin {
+  fill: var(--map-accent);
+}
+
+.hr-map__place.is-current text {
+  fill: #9b362c;
+  font-weight: 750;
+}
+
+.hr-map__north {
+  fill: #617784;
+  stroke: #617784;
+  stroke-width: 2px;
+}
+
+.hr-map__north text {
+  font-family: var(--sans, "DM Sans", Arial, sans-serif);
+  font-size: 23px;
+  font-weight: 600;
+  stroke: none;
+}
+
+.hr-map__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 13px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 550;
+}
+
+.hr-map__source {
+  color: #62717c;
+  font-size: 10px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+@container regional-map (max-width: 400px) {
+  .hr-map__place text {
+    font-size: 46px;
+    stroke-width: 10px;
+  }
+
+  .hr-map__pin {
+    r: 11px;
+    stroke-width: 5px;
+  }
+
+  .hr-map__caption {
+    padding-top: 10px;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .hr-map__source {
+    font-size: 9px;
+  }
+}
+
+@media print {
+  .hr-map__canvas {
+    border: 1px solid #c5cfd5;
+  }
+}

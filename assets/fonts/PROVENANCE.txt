@@ -1,0 +1,22 @@
+Self-hosted font provenance
+Retrieved 2026-11-24
+Stylesheet: https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap
+
+dm-sans-latin-variable.woff2
+https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2
+Bytes: 36932
+SHA256: 9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543
+
+instrument-serif-latin-italic.woff2
+https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2
+Bytes: 22128
+SHA256: 5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7
+
+instrument-serif-latin-normal.woff2
+https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2
+Bytes: 21032
+SHA256: 5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31
+
+License: ('dmsans', 'downloaded', 'https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt', 4482)
+
+License: ('instrumentserif', 'downloaded', 'https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt', 4405)
