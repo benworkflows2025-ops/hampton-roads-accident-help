@@ -555,3 +555,9 @@ legend { margin-bottom: 11px; padding: 0; font-size: 15px; font-weight: 600; lin
 .site-header { transition: transform .25s ease; }
 .site-header.is-hidden { transform: translateY(-100%); }
 @media (prefers-reduced-motion: reduce) { .site-header { transition: none; } }
+
+/* Success message: big and obvious so people know it went through (Ben 11-25) */
+.form-status.is-success{margin-top:0;padding:36px 24px;border:0;border-radius:14px;background:#1f7a4d;color:#fff;text-align:center;font-size:21px;font-weight:700;line-height:1.5;white-space:pre-line;box-shadow:0 12px 32px rgba(31,122,77,.35);animation:hrah-pop .35s ease-out}
+.form-status.is-success::before{content:"\2713";display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 16px;border-radius:50%;background:#fff;color:#1f7a4d;font-size:40px;font-weight:800}
+@keyframes hrah-pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion: reduce){.form-status.is-success{animation:none}}

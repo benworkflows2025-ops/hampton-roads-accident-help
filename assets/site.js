@@ -286,7 +286,7 @@
         form.reset();
         stages.forEach(stage => { stage.hidden = true; });
         if (stepNumber) stepNumber.textContent = 'Review sent';
-        showStatus('Thanks. We got it. A local injury attorney will look it over and call you.');
+        showStatus('Thanks, we got it!\nA local injury attorney will look it over and call you soon.');
         statusBox.classList.add('is-success');
         statusBox.focus();
       } catch {
