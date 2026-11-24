@@ -3,6 +3,6 @@
  * The endpoint must accept JSON and return { "success": true } on acceptance.
  */
 window.HRAH_FORM_CONFIG = {
-  endpoint: '',
+  endpoint: 'https://services.leadconnectorhq.com/hooks/B3UAjI7YdFTLnLcCmHCX/webhook-trigger/2ac07b36-e38a-456b-82a4-c576cd7bc92a',
   consentVersion: 'original'
 };
