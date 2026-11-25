@@ -55,6 +55,7 @@
     const submitButton = form.querySelector('button[type="submit"]');
     const nameInput = form.querySelector('input[name="name"]');
     const phoneInput = form.querySelector('input[name="phone"]');
+    const emailInput = form.querySelector('input[name="email"]');
     const consentInput = form.querySelector('input[name="consent"]');
     const consentText = form.querySelector('[data-consent-text]');
     const errorBox = document.querySelector('[data-form-error]');
@@ -144,6 +145,12 @@
       if (digitCount < 7 || digitCount > 15) {
         if (currentStep !== 1) showStep(1, false);
         showError('Please enter a phone number with 7 to 15 digits.', phoneInput);
+        return false;
+      }
+      // Email is optional; only check it when they typed one.
+      if (emailInput && emailInput.value.trim() && !emailInput.checkValidity()) {
+        if (currentStep !== 1) showStep(1, false);
+        showError('Please check your email address, or leave it blank.', emailInput);
         return false;
       }
       return true;
@@ -241,6 +248,7 @@
       const payload = {
         name: nameInput.value.trim(),
         phone: phoneInput.value.trim(),
+        email: emailInput ? emailInput.value.trim() : '',
         when: form.querySelector('input[name="when"]:checked').value,
         hurt: form.querySelector('input[name="hurt"]:checked').value,
         fault: form.querySelector('input[name="fault"]:checked').value,
